@@ -29,6 +29,7 @@
   "bugs": {
     "url": "https://github.com/drwpow/openapi-typescript/issues"
   },
+  "files": ["bin/**/*"],
   "homepage": "https://github.com/drwpow/openapi-typescript#readme",
   "@pika/pack": {
     "pipeline": [
@@ -57,7 +58,8 @@
     "test": "npm run build && jest --no-cache",
     "test:coverage": "npm run build && jest --no-cache --coverage && codecov",
     "typecheck": "tsc --noEmit",
-    "version": "npm run build"
+    "version": "npm run build",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "js-yaml": "^4.0.0",
