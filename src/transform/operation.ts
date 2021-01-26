@@ -11,6 +11,7 @@ export function transformOperationObj(
   let output = "";
 
   if (operation.parameters) {
+    console.log(operation.parameters, "FOO");
     output += `  parameters: {\n    ${transformParametersArray(operation.parameters, globalParams)}\n  }\n`;
   }
 
