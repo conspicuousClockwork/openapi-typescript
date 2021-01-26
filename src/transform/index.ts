@@ -51,6 +51,7 @@ export function transformAll(schema: any, { version, rawSchema }: TransformOptio
 
       // #/parameters
       if (schema.parameters) {
+        console.log(schema.parameters, 'PARAM');
         const required = Object.keys(schema.parameters);
         output += `export interface parameters {\n    ${transformSchemaObjMap(schema.parameters, {
           required,

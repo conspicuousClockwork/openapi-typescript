@@ -78,6 +78,7 @@ export function transformSchemaObj(node: any): string {
         output += `{ [key: string]: any }`;
         break;
       }
+      console.log(node.properties, "desc");
 
       let properties = transformSchemaObjMap(node.properties || {}, { required: node.required });
 
