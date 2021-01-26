@@ -29,7 +29,10 @@
   "bugs": {
     "url": "https://github.com/drwpow/openapi-typescript/issues"
   },
-  "files": ["bin/**/*"],
+  "files": [
+    "bin/**/*",
+    "pkg/**/*"
+  ],
   "homepage": "https://github.com/drwpow/openapi-typescript#readme",
   "@pika/pack": {
     "pipeline": [
