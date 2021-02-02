@@ -1,0 +1,15 @@
+import { OpenAPI2, OpenAPI3, ReferenceObject } from "./types";
+export declare function comment(text: string): string;
+export declare function fromEntries(entries: [string, any][]): Record<string, unknown>;
+export declare function isRef(obj: any): obj is ReferenceObject;
+declare type SchemaObjectType = "anyOf" | "array" | "boolean" | "enum" | "number" | "object" | "oneOf" | "ref" | "string";
+export declare function nodeType(obj: any): SchemaObjectType | undefined;
+export declare function swaggerVersion(definition: OpenAPI2 | OpenAPI3): 2 | 3;
+export declare function transformRef(ref: string, root?: string): string;
+export declare function tsArrayOf(type: string): string;
+export declare function tsTupleOf(types: string[]): string;
+export declare function tsIntersectionOf(types: string[]): string;
+export declare function tsPartial(type: string): string;
+export declare function tsUnionOf(types: string[]): string;
+export declare function unrefComponent(components: any, ref: string): any;
+export {};
