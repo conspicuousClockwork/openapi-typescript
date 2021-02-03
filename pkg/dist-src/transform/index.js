@@ -80,7 +80,7 @@ export function transformAll(schema, { version, rawSchema }) {
         Object.entries(operations).forEach(([operationId, operation]) => {
             if (operation.description)
                 output += comment(operation.description);
-            output += `  "${operationId}": {\n    ${transformOperationObj(operation, (schema.components && schema.components.parameters) || [])};\n  }\n`;
+            output += `  "${operationId}": {\n    ${transformOperationObj(operation, (schema.components && schema.components.parameters) || schema.parameters || [])};\n  }\n`;
         });
     }
     output += `}\n`;

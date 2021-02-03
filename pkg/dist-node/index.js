@@ -529,7 +529,7 @@ function transformAll(schema, {
   if (Object.keys(operations).length) {
     Object.entries(operations).forEach(([operationId, operation]) => {
       if (operation.description) output += comment(operation.description);
-      output += `  "${operationId}": {\n    ${transformOperationObj(operation, schema.components && schema.components.parameters || [])};\n  }\n`;
+      output += `  "${operationId}": {\n    ${transformOperationObj(operation, schema.components && schema.components.parameters || schema.parameters || [])};\n  }\n`;
     });
   }
 
